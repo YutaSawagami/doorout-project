@@ -1,0 +1,12 @@
+version: '3'
+services: 
+  doorout:
+    build: .
+    environment: 
+      - NODE_ENV=development
+    volumes: 
+      - doorout/:/usr/src/doorout
+      
+    ports:
+      - '3000:3000'
+    tty: true
